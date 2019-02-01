@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <title>jQuery</title>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //after, dodaję za containerem div
+             $("#container").after("<p>&mdash; Koniec tekstu &mdash; </p>");
+             $("#container").before("<p>&mdash; Początek tekstu &mdash; </p>");
+
+             $(".przed").click(function(){
+             $("h1").before("&mdash;");
+            });
+
+            $(".po").click(function(){
+             $("h1").after("&mdash;");
+            });
+
+        });
+    </script>
+    <style>
+        body{
+        text-align: center;
+        }
+
+        h1 {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ala ma kota</h1>
+    <hr>
+    <button type="button" class="przed">Wprowadź przed</button>
+    <button type="button" class="po">Wprowadź po</button>
+    <hr>
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dignissimos quo ad voluptate placeat. Aliquam in culpa sunt iure. Ipsam, voluptatum neque. Perferendis ipsum aliquam sequi! Expedita voluptatem facilis eveniet.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dignissimos quo ad voluptate placeat. Aliquam in culpa sunt iure. Ipsam, voluptatum neque. Perferendis ipsum aliquam sequi! Expedita voluptatem facilis eveniet.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dignissimos quo ad voluptate placeat. Aliquam in culpa sunt iure. Ipsam, voluptatum neque. Perferendis ipsum aliquam sequi! Expedita voluptatem facilis eveniet.</p>
+    </div>
+</body>
+</html>

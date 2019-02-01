@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <title>jQuery</title>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // przypisz klase aaa elementom li
+            //  $("li").addClass("aaa");
+
+            //przypisz klase aaa rodzicowi elementow li (parent)
+            //w zbadaj to dobrze widac, class aaa zostala przypisana do ul
+
+            //  $("li").parent().addClass("aaa");
+
+            //przypisz klase aaa wszystkim rodzicow elementow li (parentS)
+
+            // $("li").parents().addClass("aaa");
+
+            //przypisz klase aaa wszystkim rodzicow elementow li do (until) body (parentsUntil)
+
+            //  $("li").parentsUntil("body").addClass("aaa");
+
+            // przypisz klase aaa rodzenstwu ul
+
+            // $("ul").siblings().addClass("aaa");
+
+            //przypisz klase aaa nastepnemu rodzenstwu po h1
+
+            //$("h1").next().addClass("aaa");
+
+            //przypisz klase aaa nastepnemu kazdemu rodzenstwu po h1 
+
+            // $("h1").nextAll().addClass("aaa");
+
+            // analogicznie: sa tez prev (poprzednie) prevAll (wszystkie poprzednie)
+
+            // przypisz klase aaa dzieciom ul
+
+            //  $("ul").children().addClass("aaa");
+
+            //przypisz klase aaa wszsytkim elementom li wewnatrz kontenera
+            //$("div").find("li").addClass("aaa");
+
+            // pierwszemu li nadaj klase aaa
+            // $("li").first("li").addClass("aaa");
+
+            // ostatniemu li nadaj klase aaa
+            // $("li").last("li").addClass("aaa");
+
+             // 4temu li nadaj klase aaa 
+             // $("li").eq("3").addClass("aaa");
+
+             // parzystym li nadaj klase aaa (odd dla nieparzystych, even parzyste)
+             //$("li").filter(":even").addClass("aaa");
+
+             // li 3-5 nadaj klase aaa
+             $("li").slice(2,5).addClass("aaa");
+
+            
+            
+            
+
+
+
+
+
+
+        });
+    </script>
+    <style>
+    .aaa {
+        background: yellowgreen;
+        border: 1px solid green;
+
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Ala ma kota</h1>
+        <p>Zajecia w dnu <em> 2 luty 2019</em></p>
+        <ul>
+            <li>Element1</li>
+            <li>Element2</li>
+            <li>Element3</li>
+            <li>Element4</li>
+            <li>Element5</li>
+            <li>Element6</li>
+        </ul>
+    </div>
+</body>
+</html>

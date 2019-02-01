@@ -8,12 +8,21 @@
     <title>jQuery</title>
     <script type="text/javascript">
         $(document).ready(function(){
-                //dodaje (append) tekst na koniec kazdego akapitu "p"
-                $("p").append("<a href='#'>Czytaj dalej</a>")
-                //dodać tekst na koncu akapitu po wcisnieciu przycisku
-                $("button").click(function(){
-                    $("#container").append("Ala ma kota");
-                });
+            
+            //w momwncie klikniecia czyscimy kontener
+         //  $("button").click(function(){
+         //   $("#container").empty();
+
+            // w momencie klikniecia usun uwage - remove
+         //   $("button").click(function(){
+         //   $("h1").remove();
+        //   });
+
+            //w momencie klikniecia usuwamy p ale nie jego zawartosc -unwrap
+            $("button").click(function(){
+            $("p").unwrap();
+            
+            });
         });
     </script>
 </head>
@@ -21,6 +30,7 @@
 <body>
     <button type="button">Wprowadź tekst</button>
     <div id="container">
+        <h1>Uwaga</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis accusamus corrupti sit dicta perspiciatis aliquid cum atque voluptatem earum nihil maiores eveniet illo reprehenderit pariatur dolorem, incidunt debitis praesentium quisquam.</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis accusamus corrupti sit dicta perspiciatis aliquid cum atque voluptatem earum nihil maiores eveniet illo reprehenderit pariatur dolorem, incidunt debitis praesentium quisquam.</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis accusamus corrupti sit dicta perspiciatis aliquid cum atque voluptatem earum nihil maiores eveniet illo reprehenderit pariatur dolorem, incidunt debitis praesentium quisquam.</p>
